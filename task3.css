@@ -1,13 +1,28 @@
 * {margin:0;padding: 0;}
+html{font-size: 62.5%}
 body {background-color: #68cdd5}
+img {width:100%}
+.top{
+	width:3rem;
+    margin: 1rem;
+}
 .center {
-	text-align: center;
+	margin: 8rem auto;
+	width: 10rem;
+}
+.text {
+	font-size: 1.2rem;
+    font-family: "HiraginoSansGB";
+    color: rgb(255, 255, 255);
+	margin:10rem 16% 10rem 16%;
 }
 .left {
 	float: left;
-	text-align: center;
+	margin-left:16%;
+	width:3rem;
 }
 .right {
 	float: right;
-	text-align: center;
+	margin-right:16%;
+    width:3rem;
 }
