@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+}
+.top{
+       position: relative;
+       background-color: #5fc0cd;
+       width:100%;
+       height: 88px;
+   }
+   .left{
+       position: absolute;top:50%;left:4%;
+       transform: translate(0,-50%);
+       font-size: 32px;
+       font-family: "STHeitiSC";
+       color: rgb(255, 255, 255);
+       line-height: 0.351;
+   }
+   .right{
+       position: absolute;top:50%;right:4%;
+       transform: translate(0,-50%);
+       font-size: 32px;
+       font-family: "STHeitiSC";
+       color: rgb(255, 255, 255);
+       line-height: 0.351;
+   }
+   .center{
+       position: absolute;top: 50%;left: 50%;
+       transform: translate(-50%,-50%);
+       font-size: 36px;
+       font-family: "STHeitiSC";
+       color: rgb(255, 255, 255);
+       line-height: 0.312;
+   }
