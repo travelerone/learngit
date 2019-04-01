@@ -1,6 +1,10 @@
 * {margin:0;padding: 0;}
 html{font-size: 62.5%}
-body {background-color: #68cdd5}
+body {
+	background-color: #68cdd5;
+    max-width: 768px;
+    margin: 0 auto;
+}
 img {width:100%}
 .top{
 	width:3rem;
