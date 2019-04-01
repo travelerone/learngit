@@ -1,0 +1,29 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    margin: 0;
+}
+img{
+    height: 100%;
+}
+header{
+    position: relative;
+    background-color: #5fc0cd;
+    height: 4rem;
+}
+a.back{
+    position: absolute;top:50%;left: 4%;
+    transform: translate(0,-50%);
+    height: 2rem;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1.8rem;
+    font-family: "STHeitiSC";
+    color: rgb(255, 255, 255);
+      
+}
