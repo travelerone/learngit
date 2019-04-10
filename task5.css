@@ -7,13 +7,17 @@ body{
 img{
     height: 100%;
 }
+.wrap{
+    max-width: 768px;
+    margin: 0 auto;
+}
 header{
     position: relative;
     background-color: #5fc0cd;
     height: 4rem;
 }
 a.back{
-    position: absolute;top:50%;left: 4%;
+    position: absolute;top:50%;left: 1.5rem;
     transform: translate(0,-50%);
     height: 2rem;
 }
@@ -24,6 +28,33 @@ a.back{
     transform: translate(-50%,-50%);
     font-size: 1.8rem;
     font-family: "STHeitiSC";
-    color: rgb(255, 255, 255);
+    color: #ffffff;
       
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    height: 5rem;
+    width: 100%;
+}
+.botton-left{
+    width: 40%;
+    margin: 1rem;
+    font-size: 1.8rem;
+    border-color: #5fc0cd;
+    border-style: solid;
+    background-color: #ffffff;
+    border-radius: 10%;
+    border-width: 1px;
+}
+.botton-right{
+    width: 45%;
+    margin: 2%;
+    font-size: 1.8rem;
+    border-color: #5fc0cd;
+    border-style: solid;
+    background-color: #ffffff;
+    border-radius: 10%;
+    border-width: 1px;
+    
 }
