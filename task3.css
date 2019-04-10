@@ -1,24 +1,31 @@
 * {margin:0;padding: 0;}
 html{font-size: 62.5%}
 body {
-	background-color: #68cdd5;
     max-width: 768px;
     margin: 0 auto;
+}
+html,body {
+	height: 100%;
+  }
+.background-color{
+	background-color: #68cdd5;
+	overflow: hidden;
+	height: 100%;
 }
 img {width:100%}
 .top{
 	width:3rem;
-    margin: 1rem;
+    padding: 1rem;
 }
 .center {
-	margin: 8rem auto;
+	margin: 6rem auto;
 	width: 10rem;
 }
 .text {
 	font-size: 1.2rem;
     font-family: "HiraginoSansGB";
-    color: rgb(255, 255, 255);
-	margin:10rem 16% 10rem 16%;
+    color: #ffffff;
+	margin:6rem 16% 6rem 16%;
 }
 .left {
 	float: left;
@@ -29,4 +36,9 @@ img {width:100%}
 	float: right;
 	margin-right:16%;
     width:3rem;
+}
+.number{font-size: 1.2rem;
+    font-family: "HiraginoSansGB";
+    color: #ffffff;
+    margin-left: -1.2rem;
 }
