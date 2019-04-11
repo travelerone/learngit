@@ -37,24 +37,10 @@ footer{
     height: 5rem;
     width: 100%;
 }
-.botton-left{
-    width: 40%;
-    margin: 1rem;
-    font-size: 1.8rem;
-    border-color: #5fc0cd;
-    border-style: solid;
-    background-color: #ffffff;
-    border-radius: 10%;
-    border-width: 1px;
+.introdution{
+    background-image:url(i/background.png);
+    background-size: cover;
 }
-.botton-right{
-    width: 45%;
-    margin: 2%;
-    font-size: 1.8rem;
-    border-color: #5fc0cd;
-    border-style: solid;
-    background-color: #ffffff;
-    border-radius: 10%;
-    border-width: 1px;
-    
+.circle{
+    width:8.5rem;
 }
