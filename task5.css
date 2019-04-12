@@ -1,46 +1,51 @@
-html{
+html {
     font-size: 62.5%;
 }
-body{
-    margin: 0;
-}
-img{
-    height: 100%;
-}
-.wrap{
+.care-worker-detail{
     max-width: 768px;
     margin: 0 auto;
 }
-header{
-    position: relative;
-    background-color: #5fc0cd;
-    height: 4rem;
+.icon{
+    display: inline-block;
+    background-size: 100% 100%;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-color: transparent;
 }
-a.back{
-    position: absolute;top:50%;left: 1.5rem;
-    transform: translate(0,-50%);
+.icon-arrow-left{
+    width: 1rem;
     height: 2rem;
+    background-image: url(i/5_back.png);
 }
-.center{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+.backbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 4rem;
+    padding: 0 2rem;
+    background-color: #5fc0cd;
+    color: #fff;
+}
+.title{
     font-size: 1.8rem;
-    font-family: "STHeitiSC";
-    color: #ffffff;
-      
 }
-footer{
-    position: absolute;
-    bottom: 0;
-    height: 5rem;
-    width: 100%;
+.text-center{
+    text-align: center;
 }
-.introdution{
-    background-image:url(i/background.png);
-    background-size: cover;
+.head-thumb{
+    width: 8.5rem;
+    height: 8.5rem;
 }
-.circle{
-    width:8.5rem;
+.block{
+    height: 17rem;
+    background-image: url(i/5_background.png);
+}
+.block-content{
+    display: flex;
+    align-items: center;
+    margin: 4rem 0 4rem 1.5rem;
+}
+.info{
+    margin: 0 0 0 2rem;
 }
