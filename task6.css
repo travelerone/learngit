@@ -104,9 +104,9 @@ html{
     content: "";
     display: inline-block;
     background: url(i/6-sprite.png) no-repeat 0 0;
-    width: 20px;
-    height: 20px;
-    background-size: 20px;
+    width: 22px;
+    height: 22px;
+    background-size: 22px;
   }
   .home-font{
     font-size: 10px;
@@ -152,6 +152,8 @@ html{
       font-size: 14px;
       font-family: "HiraginoSansGB";
       color: #999999;
+      padding: .5rem 0;
+      text-align: right;
   }
   img{
       vertical-align: baseline;
@@ -163,7 +165,8 @@ html{
     margin-left: 20vw;
   }
   .dropdown-toggle::after{
-      margin-left: 1.5em;
+    margin-left: 11vw;
+    margin-right: 1vw;
   }
   .navbar-expand{
       height: 50px;
@@ -172,4 +175,7 @@ html{
   }
   main{
       padding-bottom: 50px;
+  }
+  .dropdown-menu{
+    min-width: 100%;
   }
