@@ -88,6 +88,11 @@ html{
     padding-left: 20px;
     font-size: 14px;
     color: #333333;
+    display: block;
+    width: 50vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .line{
     position: relative;
@@ -121,6 +126,7 @@ html{
   }
   .nav-bottom{
       border-bottom: 1px solid #e1e5e7;
+      padding-top: 45px;
   }
   .border-bottom{
     padding: 15px;
@@ -165,5 +171,5 @@ html{
       background-color: #f8fafb;
   }
   main{
-      margin-bottom: 50px;
+      padding-bottom: 50px;
   }
