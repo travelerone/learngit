@@ -125,9 +125,9 @@ html{
     color: #999999;    
   }
   .nav-bottom{
-      border-bottom: 1px solid #e1e5e7;
-      padding-top: 45px;
-  }
+    border-bottom: 1px solid #e1e5e7;
+    padding: 45px 0 0 0;
+}
   .border-bottom{
     padding: 15px;
   }
@@ -148,13 +148,6 @@ html{
     height: 40px;
     background: linear-gradient(#fff,#e1e5e7,#fff);
   }
-  .ul-font{
-      font-size: 14px;
-      font-family: "HiraginoSansGB";
-      color: #999999;
-      padding: .5rem 0;
-      text-align: right;
-  }
   img{
       vertical-align: baseline;
   }
@@ -165,8 +158,8 @@ html{
     margin-left: 20vw;
   }
   .dropdown-toggle::after{
-    margin-left: 11vw;
-    margin-right: 1vw;
+    float: right;
+    margin-top: 10px;
   }
   .navbar-expand{
       height: 50px;
@@ -178,4 +171,16 @@ html{
   }
   .dropdown-menu{
     min-width: 100%;
+    max-width: 100%;
+    position: absolute; 
+    transform: translate3d(0px, 40px, 0px) !important;
+    top: 0px; 
+    left: 0px; 
+    will-change: transform;
   }
+  
+  .ul-font{
+    font-family: "HiraginoSansGB";
+    color: #999999;
+    padding: .5rem 0.5rem;
+}
