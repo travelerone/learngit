@@ -1,0 +1,103 @@
+html,body{
+    height: 100%;
+}
+.navbar-container{
+    height: 44px;
+    background-color: #29bde0;
+    position: relative;
+}
+.icon-bar{
+    width: 17px;
+    height: 2px;
+    background-color: #fff;
+}
+.toggle{
+    position: absolute;
+    left: 11px;
+    top: 20px;
+}
+.icon-bar+.icon-bar{
+    margin-top: 4px;
+}
+.container{
+    padding-left: 18px;
+    padding-right: 18px;
+}       
+.container-color{
+    background-color: #f0f0f0;
+    height: calc(100% - 44px);
+} 
+.col{
+    text-align: center;
+    border: 1px solid #e6e6e6;
+    background: #fff;
+}
+.last-time{
+    display: block;
+    margin: 14px 0;
+    padding: 16px 0;
+    font-size: 17px;
+    color: #9a9a9a;
+    position: relative;
+}
+.chevron{
+    display: inline-block;
+    border-top: 2px solid;
+    border-right: 2px solid;
+    width: 14px;
+    height: 14px;
+    border-color: #e7e7e7;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 21px;
+    right: 7px;
+
+}
+.game{ 
+    font-family: HiraginoSansGB-W3;
+    font-size: 19px;
+    color: #fbb435;
+    padding: 9px 0;
+    border-bottom: 1px solid #fbb435;
+}
+.lite{
+    display: block;
+    margin: 13px 25px;
+    padding: 22px 0;
+    background-color: #69d1e9;
+    font-family: HiraginoSansGB-W3;
+    font-size: 16px;
+    color: #fff;
+}
+.this-moment{
+    font-family: HiraginoSansGB-W3;
+    font-size: 12px;
+    color: #787878;
+}
+.circle{
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+}
+.circle-blue{
+    background-color: #69d1e9;
+}
+.triangle{
+    display: block;
+    width: 0;
+    height: 0;
+    border: 14px solid;
+    border-color: transparent transparent transparent #fbb435;
+    position: absolute;
+    top: 150px;
+    right: -10px;
+
+}
+.main-next{
+    position: relative;
+}
+a:hover{
+   text-decoration: none;
+}

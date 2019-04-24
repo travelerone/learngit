@@ -9,65 +9,40 @@
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title>版本选择</title>
-    <style>
-        .navbar-container{
-            height: 44px;
-	        background-color: #29bde0;
-            position: relative;
-        }
-        .icon-bar{
-            width: 17px;
-            height: 2px;
-            background-color: #fff;
-        }
-        .toggle{
-	        position: absolute;
-            left: 11px;
-            top: 20px;
-        }
-        .icon-bar+.icon-bar{
-            margin-top: 4px;
-        }
-        .container{
-            padding-left: 18px;
-            padding-right: 18px;
-            background-color: #f0f0f0;
-        }
-        .row{
-            margin: 0;
-        }
-        .col{
-            text-align: center;
-            margin: 14px 0;
-            padding: 21px 0;
-            border: 1px solid #e6e6e6;
-            background: #fff;
-        }
-        .chevron{
-            display: inline-block;
-            border-top: 2px solid;
-            border-right: 2px solid;
-            width: 14px;
-            height: 14px;
-            border-color: #e7e7e7;
-            transform: rotate(45deg);
-        }
-    </style>
+    <link rel="stylesheet" href="task7-1.css">
   </head>
   <body>
-        <header class="navbar-container">
+        <header class="container navbar-container">
             <div class="toggle">
                 <div class="icon-bar"></div>
                 <div class="icon-bar"></div>
                 <div class="icon-bar"></div>
             </div>
         </header>
-        <main class="container">
-            <div class="row">
-                <div class="col"><span>上次游戏：捉鬼猜词版</span><span class="chevron"></span></div>
+        <main class="container container-color">
+            <div class="row no-gutters">
+                <a class="col last-time" href="task7-2.html"><span>上次游戏：捉鬼猜词版</span><span class="chevron"></span></a>
             </div>
-            <div class="row">
-                <div class="col"></div>
+            <div class="row no-gutters">
+                <div class="col game">
+                    <span>捉鬼游戏</span>
+                </div>
+                <div class="w-100"></div>
+                <div class="col border-top-0 main-next">
+                    <a class="lite" href="task7-2.html">简化版</a>
+                    <span class="this-moment">有1133个用户正在玩此游戏</span>
+                    <a class="lite" href="task7-2.html">猜词版</a>
+                    <span class="this-moment">有1133个用户正在玩此游戏</span>
+                    <a class="lite" href="task7-2.html">白痴版</a>
+                    <span class="this-moment">有1133个用户正在玩此游戏</span>
+                    <div>
+                        <div class="circle circle-blue"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                    <a class="triangle" href="#"></a>
+                </div>
             </div>
         </main>
     <!-- Optional JavaScript -->
