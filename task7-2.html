@@ -10,6 +10,21 @@
 
     <title>发言讨论结束，投票</title>
     <link rel="stylesheet" href="task7-2.css">
+    <script language="javascript" type="text/javascript">
+        //控制封面音乐播放的暂停和继续播放
+var flag =false;
+function myFun() {
+    var audio = document.getElementById('music');
+    if (!flag) {
+        audio.pause();
+        document.getElementById('musicImg').src = "i/7-play.png";
+        flag = true;
+    } else {
+        audio.play();
+        document.getElementById('musicImg').src = "i/7-play.png";
+        flag = false;
+    }}
+    </script>
   </head>
   <body>
         <nav class="nav justify-content-between">
@@ -17,16 +32,17 @@
             <span class="navbar-text">投票</span>
             <a class="nav-link" href="#"><img class="close" src="i/7-close.png"></a>
         </nav>
-      <div class="click-music">
-            <div class="tips">
-                <span class="vote">发表讨论结束，大家请投票</span>
-                <a class="play" href="#"><img src="i/7-play.png"></a>
+    
+        <div class="tips">
+            <span class="vote">发表讨论结束，大家请投票</span>
+            <div id="musical">
+                <img src="i/7-play.png" alt="" onClick="myFun();" id="musicImg">
+                <audio id="music" src="i/nobody-knows.mp3" loop autoplay></audio>
             </div>
             <div class="triangle"></div>
-            <span class="click">点击投票数最多人的头像</span>
-            <audio src="i/nobody-knows.mp3" controls class="music"></audio>
-      </div>
-      <div class="container">
+        </div>
+        <span class="click">点击投票数最多人的头像</span>
+        <div class="container">
             <div class="row no-gutters first-row">
                 <div class="col">
                     <div class="role">
