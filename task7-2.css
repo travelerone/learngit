@@ -141,11 +141,10 @@ img{
     background-color: #29bde0;
 }
 .music{
-    width: 90px;
-    height: 13px;
+    vertical-align: top;
     display: none;
 }
-.tips:hover .music{
+.click-music:hover .music{  
     display: inline;
 }
 a:hover{
