@@ -12,18 +12,18 @@
     <link rel="stylesheet" href="task7-2.css">
     <script language="javascript" type="text/javascript">
         //控制封面音乐播放的暂停和继续播放
-var flag =false;
-function myFun() {
-    var audio = document.getElementById('music');
-    if (!flag) {
+        var flag =false;
+        function myFun() {
+        var audio = document.getElementById('music');
+        if (!flag) {
         audio.pause();
         document.getElementById('musicImg').src = "i/7-play.png";
         flag = true;
-    } else {
+        } else {
         audio.play();
         document.getElementById('musicImg').src = "i/7-play.png";
         flag = false;
-    }}
+        }}
     </script>
   </head>
   <body>
