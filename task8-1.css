@@ -1,3 +1,154 @@
 body {
     font-family: Arial, "Times New Roman", "Microsoft YaHei", SimSun, SimHei;
 }
+img{
+    max-width: 100%;
+}
+/*咨询电话*/
+.tel-word {
+    float: left;
+    line-height: 40px;
+    color: #333;
+}
+
+/*第一行小图标*/
+.img-wrap {
+    line-height: 40px;
+    text-align: right;
+}
+
+.mobile-img {
+    background: url(i/8-mobile.png) 0 0/100% no-repeat;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+
+.weixin-img {
+    background: url(i/8-weixin.png) 0 0/100% no-repeat;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+
+.weibo-img {
+    background: url(i/8-weibo.png) 0 0/100% no-repeat;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+
+.mobile-img,
+.weixin-img,
+.weibo-img {
+    margin-right: 22px;
+    position: relative;
+    top: 7px;
+}
+/*导航栏*/
+.navbar,
+.header-nav-wrap {
+    background: #29b078;
+    height: auto;
+}
+.navbar-brand {
+    max-width: 300px;
+    margin-top: 0;
+}
+.navbar-dark .navbar-nav > li > a {
+    display: block;
+    height: 97px;
+    padding: 0;
+    font-size: 16px;
+    line-height: 93px;
+    color: #fff;
+    text-align: center;
+    border-bottom: 4px solid #29b078;
+    text-decoration: none;
+    cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
+    .navbar-btn {
+        border: 0;
+    }
+
+    .navbar .navbar-toggler:hover,
+    .navbar .navbar-toggler:active {
+        background: rgba(0, 0, 0, 0.2);
+    }
+    .navbar-brand {
+        max-width: 200px;
+        padding: 0;
+        margin: 10px;
+        height: 34px;
+    }
+
+    .navbar-brand img {
+        width: auto;
+        height: 100%;
+    }
+    .navbar-dark .navbar-nav > li a {
+        height: 40px;
+        margin: 0;
+        padding: 0;
+        line-height: 40px;
+        color: #fff;
+        background: #29b078;
+        opacity: 0.9;
+        z-index: 9999;
+    }
+    .navbar-dark .navbar-nav > li> a:focus {
+        color: #fff;
+        background: #38c58a;
+        border: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .navbar-brand {
+        max-width: 217px;
+    }
+    .navbar-dark .navbar-nav > li > a {
+        height: 68px;
+        line-height: 72px;
+    }
+}
+/*转换按钮*/
+.navbar-btn {
+    background: #47d197;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+}
+.navbar-dark .navbar-nav > li > a:hover,
+.navbar-dark .navbar-nav > li.active > a {
+    border-bottom: 4px solid white;
+    color: #fff;
+    background: #29b078;
+}
+/*轮播下大图标*/
+.home-tag {
+    padding: 60px 0 58px 0;
+    text-align: center;
+}
+.home-tag-icon {
+    height: 70px;
+}
+
+.home-tag-help {
+    /* 让图片垂直居中的hack */
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.home-tag p {
+    font-size: 16px;
+    color: #999999;
+}
+.home-num{
+    margin: 60px 15px 58px 0px;
+    border-left: solid 2px #dedede;
+    text-align: center;
+    font-size: 16px;
+    color: #999999;
+}
