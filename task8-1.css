@@ -1,9 +1,16 @@
 body {
     font-family: Arial, "Times New Roman", "Microsoft YaHei", SimSun, SimHei;
 }
-img{
+
+img {
     max-width: 100%;
+    height: auto;
 }
+
+.cursor {
+    cursor: pointer;
+}
+
 /*咨询电话*/
 .tel-word {
     float: left;
@@ -45,17 +52,20 @@ img{
     position: relative;
     top: 7px;
 }
+
 /*导航栏*/
 .navbar,
 .header-nav-wrap {
     background: #29b078;
     height: auto;
 }
+
 .navbar-brand {
     max-width: 300px;
     margin-top: 0;
 }
-.navbar-dark .navbar-nav > li > a {
+
+.navbar-dark .navbar-nav>li>a {
     display: block;
     height: 97px;
     padding: 0;
@@ -67,6 +77,8 @@ img{
     text-decoration: none;
     cursor: pointer;
 }
+
+/*小于767px时*/
 @media only screen and (max-width: 767px) {
     .navbar-btn {
         border: 0;
@@ -76,6 +88,7 @@ img{
     .navbar .navbar-toggler:active {
         background: rgba(0, 0, 0, 0.2);
     }
+
     .navbar-brand {
         max-width: 200px;
         padding: 0;
@@ -87,7 +100,8 @@ img{
         width: auto;
         height: 100%;
     }
-    .navbar-dark .navbar-nav > li a {
+
+    .navbar-dark .navbar-nav>li a {
         height: 40px;
         margin: 0;
         padding: 0;
@@ -97,40 +111,48 @@ img{
         opacity: 0.9;
         z-index: 9999;
     }
-    .navbar-dark .navbar-nav > li> a:focus {
+
+    .navbar-dark .navbar-nav>li>a:focus {
         color: #fff;
         background: #38c58a;
         border: none;
     }
 }
 
+/*在768px到992px时*/
 @media screen and (min-width: 768px) and (max-width: 992px) {
     .navbar-brand {
         max-width: 217px;
     }
-    .navbar-dark .navbar-nav > li > a {
+
+    .navbar-dark .navbar-nav>li>a {
         height: 68px;
         line-height: 72px;
     }
 }
+
 /*转换按钮*/
 .navbar-btn {
     background: #47d197;
 }
+
 .navbar-dark .navbar-nav .nav-link {
     color: #fff;
 }
-.navbar-dark .navbar-nav > li > a:hover,
-.navbar-dark .navbar-nav > li.active > a {
+
+.navbar-dark .navbar-nav>li>a:hover,
+.navbar-dark .navbar-nav>li.active>a {
     border-bottom: 4px solid white;
     color: #fff;
     background: #29b078;
 }
+
 /*轮播下大图标*/
 .home-tag {
     padding: 60px 0 58px 0;
     text-align: center;
 }
+
 .home-tag-icon {
     height: 70px;
 }
@@ -141,14 +163,154 @@ img{
     height: 100%;
     vertical-align: middle;
 }
+
 .home-tag p {
     font-size: 16px;
     color: #999999;
 }
-.home-num{
+
+.home-num {
     margin: 60px 15px 58px 0px;
-    border-left: solid 2px #dedede;
+    border-left: dashed 2px #dedede;
     text-align: center;
     font-size: 16px;
+    color: #999999;
+}
+
+@media screen and (max-width: 768px) {
+    .home-num {
+        border-left: none;
+    }
+}
+
+.home-num .text-num {
+    font-size: 18px;
+    color: #26a26f;
+}
+
+.icon-user::before {
+    display: inline-block;
+    content: "";
+    background: url(i/8-user.png) 0 0/100% no-repeat;
+    width: 13px;
+    height: 13px;
+}
+
+.home-section-title {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.home-section-content {
+    padding: 40px 0;
+}
+
+.step {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 1px 2px 0px rgba(8, 1, 3, 0.15);
+    text-align: center;
+    vertical-align: middle;
+    font-family: MicrosoftYaHei;
+    font-size: 18px;
+    line-height: 50px;
+    letter-spacing: 1px;
+    color: #29b078;
+}
+
+.step-text {
+    flex: 1;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #999999;
+}
+
+.icon-next {
+    width: 28px;
+    height: 26px;
+}
+
+@media screen and (min-width:769px) and (max-width:992px) {
+    .even {
+        display: none;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .icon-next {
+        display: none;
+    }
+
+    .step-text {
+        font-size: 20px
+    }
+}
+
+.home-section-student {
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+    background-color: #fff;
+    margin-bottom: 25px;
+}
+
+.home-section-student>img {
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.home-section-student h4 {
+    margin-top: 35px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.home-section-student p {
+    margin-bottom: 20px;
+    padding: 0 30px;
+    min-height: 100px;
+    color: #999999;
+    font-size: 16px;
+}
+
+.carousel-indicators {
+    margin-bottom: -25px;
+}
+
+.carousel-indicators li {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 3px 0px rgba(8, 1, 3, 0.15);
+}
+
+.carousel-indicators .active {
+    background-color: #29b078;
+}
+
+.logo-hover:hover {
+    box-shadow: 0 4px 10px #aaa;
+}
+
+.img-height {
+    height: 100px;
+    line-height: 100px;
+}
+
+.img-height img {
+    height: 70px;
+}
+
+.friendly-link {
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
     color: #999999;
 }
