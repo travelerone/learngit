@@ -438,3 +438,47 @@ footer img {
 .hall-card span {
     color: #ff5b00;
 }
+/*hover 阴影效果*/
+.hall {
+    position: relative;
+    overflow: hidden;
+}
+
+.hall-text {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    position: absolute;
+    top: 0;
+    left:-100%;
+    width: 100%;
+    height: calc(100% - 20px);
+    background-color: rgba(8,1,3,0.5);
+    transition: width 500ms;
+    -webkit-transition: left 500ms;
+    /* Safari */
+    color: #fff;
+}
+.hall:hover .hall-text{
+    left: 0;
+}
+h5 a{
+    text-decoration: none;
+    color: #000;
+}
+/*第三页样式开始*/
+.sidebar {
+    text-align: center;
+    margin: 25px 0;
+    padding: 35px 0;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    background: #fff;
+}
+.select{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #ff5c00;
+    border-radius: 50%;
+}
