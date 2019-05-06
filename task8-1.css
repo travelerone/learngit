@@ -168,6 +168,7 @@ img {
 .home-tag {
     padding: 60px 0 58px 0;
     text-align: center;
+    height: 312px;
 }
 
 .home-tag-icon {
@@ -184,6 +185,7 @@ img {
 .home-tag p {
     font-size: 16px;
     color: #999999;
+    text-align: center;
 }
 
 .home-num {
@@ -192,6 +194,7 @@ img {
     text-align: center;
     font-size: 16px;
     color: #999999;
+    height: 194px;
 }
 /*小于等于768px左边框隐藏*/
 @media screen and (max-width: 768px) {
@@ -203,6 +206,7 @@ img {
 .home-num .text-num {
     font-size: 18px;
     color: #26a26f;
+    padding-top: 20px;
 }
 
 .icon-user::before {
@@ -220,6 +224,7 @@ img {
 
 .home-section-content {
     padding: 40px 0;
+    height: 176px;
 }
 
 .step {
@@ -433,6 +438,7 @@ footer img {
 
 .hall-card h4 {
     margin-top: 10px;
+    font-size: 1rem;
 }
 
 .hall-card span {
@@ -447,7 +453,7 @@ footer img {
 .hall-text {
     display: flex;
     align-items: center;
-    text-align: left;
+    text-align: justify;
     position: absolute;
     top: 0;
     left:-100%;
@@ -458,6 +464,7 @@ footer img {
     -webkit-transition: left 500ms;
     /* Safari */
     color: #fff;
+    padding: 35px;
 }
 .hall:hover .hall-text{
     left: 0;
