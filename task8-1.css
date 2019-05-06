@@ -468,9 +468,8 @@ h5 a{
 }
 /*第三页样式开始*/
 .sidebar {
-    text-align: center;
     margin: 25px 0;
-    padding: 35px 0;
+    padding: 25px 0;
     border: 1px solid #e6e6e6;
     border-radius: 8px;
     background: #fff;
@@ -481,4 +480,51 @@ h5 a{
     height: 14px;
     border: 1px solid #ff5c00;
     border-radius: 50%;
+}
+.sidebar p{
+    text-align: center;
+    border-bottom: 1px solid #e6e6e6;
+}
+.sidebar .nav{
+    display: block;
+}
+.sidebar .nav li{
+    padding: 10px 15px;
+}
+.nav li a {
+    color: #29b078;
+    cursor: pointer;
+    padding-left: calc(100%/2 - 48px);
+}
+
+.nav > li > a:focus,
+.nav > li > a:hover {
+    background-color: #fff;
+    text-decoration: none;
+    color: #ff5c00;
+}
+.nav > li > a:focus .select,
+.nav > li > a:hover .select{
+    background-color: #ff5c00;
+}
+.thumb{
+    float: left;
+    padding: 25px;
+    max-width: 183px;
+}
+.content-header{
+    border: 1px solid #e6e6e6;
+    padding: 25px;
+}
+.content-header p{
+    color: #999999;
+}
+.top-rounded{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-top: 25px;
+}
+.bottom-rounded{
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
