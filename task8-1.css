@@ -488,6 +488,9 @@ h5 a{
     border: 1px solid #ff5c00;
     border-radius: 50%;
 }
+.nav li a span{
+    vertical-align: middle;
+}
 .sidebar p{
     text-align: center;
     border-bottom: 1px solid #e6e6e6;
