@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>幻灯片</title>
+    <style>
+        img{
+            width: 500px;
+        }
+        .banner{
+            width: 500px;
+            height: 300px;
+            border: 1px solid greenyellow;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .long{
+            position: absolute;
+            left: 0;
+            width: 1500px;
+            font-size: 0;
+        }
+        .banner div{
+            margin: 0;
+            padding: 0;
+        transition: all 1s;
+        }
+
+        #slideinput-one:checked ~ div{
+            left: 0;
+        }
+        #slideinput-two:checked ~ div{
+            left: -500px;
+        }
+        #slideinput-three:checked ~ div{
+            left: -1000px;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <input type="radio" name="slideinput" value="0" id="slideinput-one" checked>
+        <label for="slideinput-one">1</label>
+        <input type="radio" name="slideinput" value="0" id="slideinput-two">
+        <label for="slideinput-two">2</label>
+        <input type="radio" name="slideinput" value="0" id="slideinput-three">
+        <label for="slideinput-three">3</label>
+        <div class="long">
+            <img src="../i/8-1.png">
+            <img src="../i/8-2.png">
+            <img src="../i/8-3.jpg">
+        </div>
+    </div>
+</body>
+</html>
