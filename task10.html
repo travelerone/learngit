@@ -37,16 +37,16 @@
                 <div class="collapse navbar-collapse justify-content-end" id="thetarget">
                     <ul class="navbar-nav nav-pills">
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-right mr-4">首页</a>
+                            <a href="#" class="nav-link text-right px-4">首页</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-right mx-4">在线定制</a>
+                            <a href="#" class="nav-link text-right px-4">在线定制</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-right mx-4">标准箱</a>
+                            <a href="#" class="nav-link text-right px-4">标准箱</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-right ml-4">品质保证</a>
+                            <a href="#" class="nav-link text-right px-4">品质保证</a>
                         </li>
                     </ul>
                 </div>
@@ -54,64 +54,94 @@
         </div>
     </div>
     <div class="container">
-        <div class="stepflex">
-            <dl>
-                <dt></dt>
-                <dd></dd>
-            </dl>
-            <dl>
-                <dt></dt>
-                <dd></dd>
-            </dl>
-            <dl>
-                <dt></dt>
-                <dd></dd>
-            </dl>
-            <dl>
-                <dt></dt>
-                <dd></dd>
-            </dl>
+        <div class="clearfix">
+            <div class="stepflex">
+                <dl class="done">
+                    <dt class="s-num">1</dt>
+                    <dd class="s-text">1.定制纸箱</dd>
+                </dl>
+                <dl>
+                    <dt class="s-num">2</dt>
+                    <dd class="s-text">2.选择数量</dd>
+                </dl>
+                <dl>
+                    <dt class="s-num">3</dt>
+                    <dd class="s-text">3.上传附件</dd>
+                </dl>
+                <dl>
+                    <dt class="s-num">4</dt>
+                    <dd class="s-text">4.确认下单</dd>
+                </dl>
+            </div>
         </div>
     </div>
 
     <div class="container">
-        <h5>
-            请您按照以下步骤来定制您的纸箱
+        <h5 class="step">
+            <i></i>
+            <span>请您按照以下步骤来定制您的纸箱</span>
         </h5>
-        <div>
+        <div class="select-steps">
             <form action="">
                 <p>
-                    选择箱型
+                    <i></i>
+                    <span>选择箱型</span>
                 </p>
-                <div>
-                    <label for=""><input type="radio">对口箱</label>
-                    <label for=""><input type="radio">飞机盒</label>
-                    <label for=""><input type="radio">天地盖</label>
-                    <select name="" id="">
-                        <option value="">查看详情</option>
-                        <option value=""></option>
-                    </select>
+                <div class="container p-4">
+                    <div class="row d-flex align-items-center">
+                        <div class="custom-control custom-radio col-sm-3">
+                            <input type="radio" class="custom-control-input" id="customradio" name="type">
+                            <label for="customradio" class="custom-control-label">对口箱</label>
+                        </div>
+                        <div class="custom-control custom-radio col-sm-3">
+                            <input type="radio" class="custom-control-input" id="aircraft" name="type">
+                            <label for="aircraft" class="custom-control-label">飞机盒</label>
+                        </div>
+                        <div class="custom-control custom-radio col-sm-3">
+                            <input type="radio" class="custom-control-input" id="heaven-earth" name="type">
+                            <label for="heaven-earth" class="custom-control-label">天地盒</label>
+                        </div>
+                        <div class="col-sm-3">
+                            <select name="" id="" class="custom-select-sm">
+                                <option value="">查看详情</option>
+                                <option value="">对口箱</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
                 <p>
-                    确定尺寸
+                    <i></i>
+                    <span>确定尺寸</span>
                 </p>
-                <div>
-                    <label for=""><input type="radio">外径</label>
-                    长<input type="text">mm
-                    宽<input type="text">mm
-                    高<input type="text">mm
-                    <br>
-                    <label for=""><input type="radio">内径</label>
-                    长<input type="text">mm
-                    宽<input type="text">mm
-                    高<input type="text">mm
-                    <select name="" id="">
-                        <option value="">查看详情</option>
-                        <option value=""></option>
-                    </select>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="custom-control custom-radio col-sm-3">
+                                    <input type="radio" class="custom-control-input" id="outer" name="outer-diameter">
+                                    <label for="outer" class="custom-control-label">外径</label>
+                                </div>
+                                长<input type="text">mm
+                                宽<input type="text">mm
+                                高<input type="text">mm
+                            </div>
+
+                            <label for=""><input type="radio">内径</label>
+                            长<input type="text">mm
+                            宽<input type="text">mm
+                            高<input type="text">mm
+                        </div>
+                        <div>
+                            <select name="" id="">
+                                <option value="">查看详情</option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
                 <p>
-                    选择材质
+                    <i></i>
+                    <span>选择材质</span>
                 </p>
                 <div>
                     <label for=""><input type="radio">对口箱</label>

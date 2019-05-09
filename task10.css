@@ -2,6 +2,9 @@ body {
     font-family: Arial, "Times New Roman", "Microsoft YaHei", SimSun, SimHei;
     color: #666;
 }
+dl,dt,dd{
+    margin: 0;
+}
 a,
 a:hover{
     text-decoration: none;
@@ -45,6 +48,120 @@ a:hover{
     display: block;
     float: right;
     text-align: center;
-    margin: 30px 0 0;
+    margin: 48px 0 0;
+    border-top: 5px solid transparent;
+}
+.stepflex dl{
+    float: left;
+    position: relative;
+    top: -5px;
+    width: 159px;
     border-top: 5px solid #ccc;
+}
+.stepflex .s-num{
+    position: relative;
+    margin: -13px auto 25px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 14px;
+    color: #fff;
+    line-height: 20px;
+    background-color: #ccc;
+}
+.stepflex .s-text{
+    color: #ccc;
+}
+.stepflex dl.done{
+    border-top-color: #ff7f02;
+}
+.stepflex dl.done .s-num{
+    width: 24px;
+    height: 24px;
+    margin: -14px auto 22px;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: #ff7f02;
+}
+.stepflex dl.done .s-text{
+    color: #ff7f02;
+}
+.clearfix{
+    padding-bottom: 90px;
+}
+@media screen and (min-width: 375px)and (max-width: 767px){
+    .stepflex dl{
+        width: 85px;
+    }
+    .clearfix{
+        padding-bottom: 20px;
+    }
+}
+@media screen and (max-width: 374px){
+    .stepflex dl{
+        width: auto;
+    }
+    .stepflex .s-text{
+        font-size: 14px;
+    }
+    .clearfix{
+        padding-bottom: 20px;
+    }
+}
+.step i {
+    display: inline-block;
+    width: 4px;
+    height: 21px;
+    border-radius: 2px;
+    background-color: #1d7ad9;
+    vertical-align: middle;
+}
+.step span{
+    vertical-align: middle;
+    font-size: 22px;
+    color: #333;
+}
+.select-steps p span{
+    font-size: 18px;
+    color: #1d7ad9;
+    vertical-align: middle;
+    line-height: 45px;
+}
+.select-steps p:nth-child(1) i {
+    display: inline-block;
+    width: 19px;
+    height: 15px;
+    vertical-align: middle;
+    background: url(i/10-sprite.png) -10px -10px/42px auto no-repeat;
+}
+.select-steps p:nth-child(3) i {
+    display: inline-block;
+    width: 22px;
+    height: 20px;
+    vertical-align: middle;
+    background: url(i/10-sprite.png) -10px -45px/42px auto no-repeat;
+}
+.select-steps p:nth-child(5) i {
+    display: inline-block;
+    width: 15px;
+    height: 20px;
+    vertical-align: middle;
+    background: url(i/10-sprite.png) -10px -85px/42px auto no-repeat;
+}
+.select-steps p{
+    padding-left: 15px;
+    margin-bottom: 0;
+    height: 45px;
+    background-color: #f3f3f3;
+}
+.select-steps{
+    border-radius: 10px;
+    overflow: hidden;
+}
+.select-steps .container{
+    border: 1px solid #e7e7e7;
+    border-top: 0;
+}
+select{
+    width: 127px;
 }
