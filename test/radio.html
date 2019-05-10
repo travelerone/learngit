@@ -1,31 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Bootstrap 实例</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
-  <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
-  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input[type="radio"]+label::before {
+            content: "\a0";
+            /*不换行空格*/
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 18px;
+            width: 1em;
+            height: 1em;
+            box-sizing: border-box;
+            margin-right: .4em;
+            border-radius: 50%;
+            border: 1px solid #01cd78;
+            text-indent: .15em;
+            line-height: 1;
+        }
+
+        input[type="radio"]:checked+label::before {
+            background-color: #01cd78;
+            background-clip: content-box;
+            padding: .2em;
+        }
+
+        input[type="radio"] {
+            position: absolute;
+            clip: rect(0, 0, 0, 0);
+        }
+    </style>
 </head>
+
 <body>
-
-<div class="container mt-3">
-  <h2>自定义单选框</h2>
-  <p>如果要自定义一个单选框，可以设置 div 为父元素，类为 .custom-control 和 .custom-radio，复选框作为子元素放在该 div 里头，然后单选框设置为 type="radio"，类为 .custom-control-input。</p>
-  <p>单选框的文本使用 label 标签，标签使用 .custom-control-label 类，label 的 for 属性值需要匹配单选框的 id。</p>
-  <form action="/action_page.php">
-    <div class="custom-control custom-radio">
-      <input type="radio" class="custom-control-input" id="customRadio" name="example1">
-      <label class="custom-control-label" for="customRadio">自定义单选框</label>
-    </div>    
-    <input type="radio" id="defaultRadio" name="example2">
-    <label for="defaultRadio">默认单选框</label>
-    <br>
-    <button type="submit" class="btn btn-primary">提交</button>
-  </form>
-</div>
-
+    <!--参考http://www.cnblogs.com/xinjie-just/p/5911086.html
+        https://www.cnblogs.com/fly-show/p/6057240.html
+        https://www.jianshu.com/p/b2faf63e99de
+        -->
+    <div class="female">
+        <input type="radio" id="female" name="sex" />
+        <label for="female">女</label>
+    </div>
+    <div class="male">
+        <input type="radio" id="male" name="sex" />
+        <label for="male">男</label>
+    </div>
 </body>
+
 </html>

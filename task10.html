@@ -89,23 +89,29 @@
                 </p>
                 <div class="container p-4">
                     <div class="row d-flex align-items-center">
-                        <div class="custom-control custom-radio col-sm-3">
-                            <input type="radio" class="custom-control-input" id="customradio" name="type">
-                            <label for="customradio" class="custom-control-label">对口箱</label>
+                        <div class="col-sm-10">
+                            <div class="row d-flex align-items-center">
+                                <div class="col-md-3">
+                                    <input type="radio" id="customradio" name="type">
+                                    <label for="customradio">对口箱</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="radio" id="aircraft" name="type">
+                                    <label for="aircraft">飞机盒</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="radio" id="heaven-earth" name="type">
+                                    <label for="heaven-earth">天地盒</label>
+                                </div>
+                            </div>
                         </div>
-                        <div class="custom-control custom-radio col-sm-3">
-                            <input type="radio" class="custom-control-input" id="aircraft" name="type">
-                            <label for="aircraft" class="custom-control-label">飞机盒</label>
-                        </div>
-                        <div class="custom-control custom-radio col-sm-3">
-                            <input type="radio" class="custom-control-input" id="heaven-earth" name="type">
-                            <label for="heaven-earth" class="custom-control-label">天地盒</label>
-                        </div>
-                        <div class="col-sm-3">
-                            <select name="" id="" class="custom-select-sm">
-                                <option value="">查看详情</option>
-                                <option value="">对口箱</option>
-                            </select>
+                        <div class="col-sm-2">
+                            <div class="my-select">
+                                <select name="" id="">
+                                    <option value="">查看详情</option>
+                                    <option value="">三级A瓦优质</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -113,29 +119,54 @@
                     <i></i>
                     <span>确定尺寸</span>
                 </p>
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="row">
-                                <div class="custom-control custom-radio col-sm-3">
-                                    <input type="radio" class="custom-control-input" id="outer" name="outer-diameter">
-                                    <label for="outer" class="custom-control-label">外径</label>
+                <div class="container p-4">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-sm-10">
+                            <div class="row d-flex align-items-center pb-4">
+                                <div class="col-md-3">
+                                    <input type="radio" id="outer" name="diameter">
+                                    <label for="outer">外径</label>
                                 </div>
-                                长<input type="text">mm
-                                宽<input type="text">mm
-                                高<input type="text">mm
+                                <div class="col-md-3">
+                                    <label for="outer-l">长</label>
+                                    <input type="text" class="w-50" id="outer-l">mm
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="outer-w">宽</label>
+                                    <input type="text" class="w-50" id="outer-w">mm
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="outer-h">高</label>
+                                    <input type="text" class="w-50" id="outer-h">mm
+                                </div>
                             </div>
 
-                            <label for=""><input type="radio">内径</label>
-                            长<input type="text">mm
-                            宽<input type="text">mm
-                            高<input type="text">mm
+                            <div class="row d-flex align-items-center">
+                                <div class="col-md-3">
+                                    <input type="radio" id="inner" name="diameter">
+                                    <label for="inner">内径</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="inner-l">长</label>
+                                    <input type="text" class="w-50" id="inner-l">mm
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="inner-w">宽</label>
+                                    <input type="text" class="w-50" id="inner-w">mm
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="inner-h">高</label>
+                                    <input type="text" class="w-50" id="inner-h">mm
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <select name="" id="">
-                                <option value="">查看详情</option>
-                                <option value=""></option>
-                            </select>
+                        <div class="col-sm-2">
+                            <div class="my-select">
+                                <select name="" id="">
+                                    <option value="">查看详情</option>
+                                    <option value="">三级A瓦优质</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -143,19 +174,44 @@
                     <i></i>
                     <span>选择材质</span>
                 </p>
-                <div>
-                    <label for=""><input type="radio">对口箱</label>
-                    <label for=""><input type="radio">对口箱</label>
-                    <label for=""><input type="radio">对口箱</label>
-                    <label for=""><input type="radio">对口箱</label>
-                    <label for=""><input type="radio">对口箱</label>
-                    <select name="" id="">
-                        <option value="">查看详情</option>
-                        <option value=""></option>
-                    </select>
+                <div class="container p-4">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-sm-10">
+                            <div class="row d-flex align-items-center">
+                                <div class="col-md-2">
+                                    <input type="radio" id="materiala" name="material-quality">
+                                    <label for="materiala">三层A瓦优质</label>
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="radio" id="materialb" name="material-quality">
+                                    <label for="materialb">三层A瓦优质</label>
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="radio" id="materialc" name="material-quality">
+                                    <label for="materialc">三层A瓦优质</label>
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="radio" id="materiald" name="material-quality">
+                                    <label for="materiald">三层A瓦优质</label>
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="radio" id="materiale" name="material-quality">
+                                    <label for="materiale">三层A瓦优质</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="my-select">
+                                <select name="" id="">
+                                    <option value="">查看详情</option>
+                                    <option value="">三级A瓦优质</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <button>下一步</button>
+                <div class="next-step d-flex align-items-center justify-content-center">
+                    <button type="button">下一步</button>
                 </div>
             </form>
         </div>
@@ -177,11 +233,13 @@
                 </p>
             </div>
             <div class="rol">
+                
                 <p>TEL：400-0000-000</p>
                 <p>企业QQ：123456789</p>
                 <p>微信号：XXXXXXX</p>
-                <img src="" alt="">
+                
             </div>
+            <img src="i/8-weixin-code.jpg" alt="" class="code col">
         </div>
     </div>
     <div>

@@ -2,63 +2,80 @@ body {
     font-family: Arial, "Times New Roman", "Microsoft YaHei", SimSun, SimHei;
     color: #666;
 }
-dl,dt,dd{
+
+dl,
+dt,
+dd {
     margin: 0;
 }
+label{
+    margin-bottom: 0;
+}
 a,
-a:hover{
+a:hover {
     text-decoration: none;
     color: #999;
 }
-.header{
+
+.header {
     height: 40px;
     color: #fff;
     background-color: #1d7ad9;
 }
-.header a{
+
+.header a {
     color: #fff;
 }
+
 .header a:focus,
 .header a:hover,
 .header a:active {
     color: #333;
     background-color: #fff;
 }
-.header .nav-pills .nav-link{
+
+.header .nav-pills .nav-link {
     border-radius: 0;
 }
-.header span{
+
+.header span {
     font-size: 14px;
     line-height: 40px;
 }
-.navbar-light .navbar-nav .nav-link{
+
+.navbar-light .navbar-nav .nav-link {
     color: #333;
     background-color: #fff;
 }
+
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover,
-.navbar-light .navbar-nav .nav-link:active{
+.navbar-light .navbar-nav .nav-link:active {
     background-color: #1d7ad9;
     color: #fff;
 }
-.nav-bg{
+
+.nav-bg {
     background-color: #f9f9f9;
 }
-.stepflex{
+
+.stepflex {
     display: block;
     float: right;
     text-align: center;
     margin: 48px 0 0;
     border-top: 5px solid transparent;
 }
-.stepflex dl{
+
+.stepflex dl {
     float: left;
     position: relative;
     top: -5px;
     width: 159px;
     border-top: 5px solid #ccc;
 }
-.stepflex .s-num{
+
+.stepflex .s-num {
     position: relative;
     margin: -13px auto 25px;
     width: 20px;
@@ -69,13 +86,16 @@ a:hover{
     line-height: 20px;
     background-color: #ccc;
 }
-.stepflex .s-text{
+
+.stepflex .s-text {
     color: #ccc;
 }
-.stepflex dl.done{
+
+.stepflex dl.done {
     border-top-color: #ff7f02;
 }
-.stepflex dl.done .s-num{
+
+.stepflex dl.done .s-num {
     width: 24px;
     height: 24px;
     margin: -14px auto 22px;
@@ -83,31 +103,39 @@ a:hover{
     line-height: 24px;
     background-color: #ff7f02;
 }
-.stepflex dl.done .s-text{
+
+.stepflex dl.done .s-text {
     color: #ff7f02;
 }
-.clearfix{
+
+.clearfix {
     padding-bottom: 90px;
 }
-@media screen and (min-width: 375px)and (max-width: 767px){
-    .stepflex dl{
+
+@media screen and (min-width: 375px)and (max-width: 767px) {
+    .stepflex dl {
         width: 85px;
     }
-    .clearfix{
+
+    .clearfix {
         padding-bottom: 20px;
     }
 }
-@media screen and (max-width: 374px){
-    .stepflex dl{
+
+@media screen and (max-width: 374px) {
+    .stepflex dl {
         width: auto;
     }
-    .stepflex .s-text{
+
+    .stepflex .s-text {
         font-size: 14px;
     }
-    .clearfix{
+
+    .clearfix {
         padding-bottom: 20px;
     }
 }
+
 .step i {
     display: inline-block;
     width: 4px;
@@ -116,17 +144,20 @@ a:hover{
     background-color: #1d7ad9;
     vertical-align: middle;
 }
-.step span{
+
+.step span {
     vertical-align: middle;
     font-size: 22px;
     color: #333;
 }
-.select-steps p span{
+
+.select-steps p span {
     font-size: 18px;
     color: #1d7ad9;
     vertical-align: middle;
     line-height: 45px;
 }
+
 .select-steps p:nth-child(1) i {
     display: inline-block;
     width: 19px;
@@ -134,6 +165,7 @@ a:hover{
     vertical-align: middle;
     background: url(i/10-sprite.png) -10px -10px/42px auto no-repeat;
 }
+
 .select-steps p:nth-child(3) i {
     display: inline-block;
     width: 22px;
@@ -141,6 +173,7 @@ a:hover{
     vertical-align: middle;
     background: url(i/10-sprite.png) -10px -45px/42px auto no-repeat;
 }
+
 .select-steps p:nth-child(5) i {
     display: inline-block;
     width: 15px;
@@ -148,20 +181,124 @@ a:hover{
     vertical-align: middle;
     background: url(i/10-sprite.png) -10px -85px/42px auto no-repeat;
 }
-.select-steps p{
+
+.select-steps p {
     padding-left: 15px;
     margin-bottom: 0;
     height: 45px;
     background-color: #f3f3f3;
 }
-.select-steps{
-    border-radius: 10px;
+
+.select-steps {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     overflow: hidden;
 }
-.select-steps .container{
+
+.select-steps .container {
     border: 1px solid #e7e7e7;
     border-top: 0;
 }
-select{
+
+@media screen and (max-width: 575px) {
+    .step span {
+        font-size: 18px;
+    }
+
+    .select-steps .align-items-center {
+        text-align: center;
+    }
+
+    .w-50 {
+        width: 40% !important;
+    }
+}
+
+input[type="radio"]+label::before {
+    content: "\a0";
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 18px;
+    width: 1em;
+    height: 1em;
+    box-sizing: border-box;
+    margin-right: .4em;
+    border-radius: 50%;
+    background: #f8f9fb;
+    border: 1px solid #e7e7e7;
+    text-indent: .15em;
+}
+
+input[type="radio"]:checked+label::before {
+    background: #1d7ad9;
+    background-clip: content-box;
+    padding: .2em;
+}
+
+input[type="radio"] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+.my-select {
     width: 127px;
+    height: 37px;
+    border: 1px solid #e8e8e8;
+    position: relative;
+}
+
+select {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.my-select::after {
+    content: "";
+    width: 24px;
+    height: 28px;
+    background: url(i/10-chevron.jpg) no-repeat center;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    pointer-events: none;
+}
+
+@media (min-width: 768px) {
+    .col-md-2 {
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+.next-step{
+    height: 287px;
+    border: 1px solid #e7e7e7;
+    border-top: 0;
+}
+button{
+    width: 179px;
+    height: 46px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-size: 24px;
+    outline: none;
+    color: #fff;
+    background-color: #666;
+}
+button:focus,
+button:hover,
+button:active{
+    background-color: #e15053;
+}
+.code{
+    width: 92px;
+    height: 92px;
 }
