@@ -206,6 +206,7 @@ input[type="radio"] {
 .my-select {
     width: 127px;
     height: 37px;
+    padding-left: 15px;
     border: 1px solid #e8e8e8;
     position: relative;
 }
@@ -289,8 +290,48 @@ footer .addr p{
     background-color: #1d7ad9;
     line-height: 33px;
 }
-@media (max-width: 576px) {
-    
+@media (max-width: 768px) {
+    .stepflex dl {
+        width: 85px;
+    }
+
+    .clearfix {
+        padding-bottom: 20px;
+    }
+    .next-step{
+        height: 150px;
+    }
+    .text-right{
+        text-align: left!important;
+    }
+    .copyright{
+        line-height: 25px;
+    }
+    form button{
+        width: 100px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+@media (max-width: 576px){
+    .stepflex dl {
+        width: auto;
+    }
+
+    .stepflex .s-text {
+        font-size: 14px;
+    }
+    .step span{
+        font-size: 18px;
+    }
+    form button{
+        width: 80px;
+        height: 40px;
+        font-size: 18px;
+    }
+    h6{
+        font-size: 17px;
+    }
 }
 /*@media screen and (max-width: 374px) {
     .stepflex dl {
