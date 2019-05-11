@@ -8,9 +8,9 @@ dt,
 dd {
     margin: 0;
 }
-label{
+/*label{
     margin-bottom: 0;
-}
+}*/
 a,
 a:hover {
     text-decoration: none;
@@ -111,31 +111,6 @@ a:hover {
 .clearfix {
     padding-bottom: 90px;
 }
-
-@media screen and (min-width: 375px)and (max-width: 767px) {
-    .stepflex dl {
-        width: 85px;
-    }
-
-    .clearfix {
-        padding-bottom: 20px;
-    }
-}
-
-@media screen and (max-width: 374px) {
-    .stepflex dl {
-        width: auto;
-    }
-
-    .stepflex .s-text {
-        font-size: 14px;
-    }
-
-    .clearfix {
-        padding-bottom: 20px;
-    }
-}
-
 .step i {
     display: inline-block;
     width: 4px;
@@ -199,21 +174,6 @@ a:hover {
     border: 1px solid #e7e7e7;
     border-top: 0;
 }
-
-@media screen and (max-width: 575px) {
-    .step span {
-        font-size: 18px;
-    }
-
-    .select-steps .align-items-center {
-        text-align: center;
-    }
-
-    .w-50 {
-        width: 40% !important;
-    }
-}
-
 input[type="radio"]+label::before {
     content: "\a0";
     display: inline-block;
@@ -230,9 +190,12 @@ input[type="radio"]+label::before {
 }
 
 input[type="radio"]:checked+label::before {
-    background: #1d7ad9;
-    background-clip: content-box;
-    padding: .2em;
+    background-color: #1d7ad9;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    border: none;
 }
 
 input[type="radio"] {
@@ -269,19 +232,12 @@ select {
     pointer-events: none;
 }
 
-@media (min-width: 768px) {
-    .col-md-2 {
-        -ms-flex: 0 0 20%;
-        flex: 0 0 20%;
-        max-width: 20%;
-    }
-}
 .next-step{
     height: 287px;
     border: 1px solid #e7e7e7;
     border-top: 0;
 }
-button{
+form button{
     width: 179px;
     height: 46px;
     margin: 0;
@@ -293,12 +249,93 @@ button{
     color: #fff;
     background-color: #666;
 }
-button:focus,
-button:hover,
-button:active{
+form button:focus,
+form button:hover,
+form button:active{
     background-color: #e15053;
+    outline: none;
 }
 .code{
     width: 92px;
     height: 92px;
+    vertical-align: top;
 }
+footer{
+    background-color: #f9f9f9;
+}
+h6{
+    font-size: 18px;
+}
+footer a{
+    font-size: 16px;
+}
+footer a:focus,
+footer a:hover,
+footer a:active{
+    color: #1d7ad9;
+}
+.addr{
+    display: inline-block;
+    vertical-align: top;
+}
+footer .addr p{
+    font-size: 14px;
+    margin-bottom: 0;
+    line-height: 30px;
+}
+.copyright{
+    font-size: 14px;
+    color: #fff;
+    background-color: #1d7ad9;
+    line-height: 33px;
+}
+@media (max-width: 576px) {
+    
+}
+/*@media screen and (max-width: 374px) {
+    .stepflex dl {
+        width: auto;
+    }
+
+    .stepflex .s-text {
+        font-size: 14px;
+    }
+
+    .clearfix {
+        padding-bottom: 20px;
+    }
+}
+@media screen and (min-width: 375px)and (max-width: 767px) {
+    .stepflex dl {
+        width: 85px;
+    }
+
+    .clearfix {
+        padding-bottom: 20px;
+    }
+}
+@media screen and (max-width: 575px) {
+    .step span {
+        font-size: 18px;
+    }
+
+    .select-steps .align-items-center {
+        text-align: center;
+    }
+
+    .w-50 {
+        width: 40% !important;
+    }
+}
+@media (min-width: 768px) {
+    .col-md-2 {
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+@media (max-width: 991px) {
+    .my-select{
+        width: 100px;
+    }
+}*/
