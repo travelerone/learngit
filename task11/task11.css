@@ -1,116 +1,106 @@
-html{
-    height: 100%;
+html {
+  height: 100%;
 }
 body {
-    padding: 0;
-    margin: 0;
-    height: 100%;
+  height: 100%;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
 }
-a{
-    color: #fff;
-    text-decoration: none;
+.full-page {
+  background-color: #eff0f4;
+  height: 100%;
+}
+@media (min-width: 768px) {
+  .full-page {
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+a {
+  color: #fff;
+  text-decoration: none;
 }
 a:focus,
 a:hover,
-a:active{
-    color: #fff;  
+a:active {
+  color: #fff;
 }
-@media (min-width: 768px){
-    .full-page{
-        width: 768px;
-        margin: 0 auto;
-    }
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 44px;
+  padding: 0 15px 0 15px;
+  font-size: 16px;
+  color: #fff;
+  font-family: STHeitiSC-Light;
+  background-color: #5fc0cd;
 }
-.full-page{
-    background-color: #eff0f4;
-    height: 100%;
+.num-bar {
+  margin: 8px 0 8px 0;
+  display: flex;
+  align-items: center;
+  padding: 12px 21px 12px 21px;
+  background-color: #fff;
 }
-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 44px;
-    padding: 0 15px 0 15px;
-    font-size: 16px;
-    color: #fff;
-    font-family: STHeitiSC-Light;
-    background-color: #5fc0cd;
+.img-iph {
+  display: inline-block;
+  width: 14px;
+  height: 21px;
+  background: url("../i/iphone.png") no-repeat;
+  background-position: 0 0;
+  background-size: 100% 100%;
 }
-.num-bar{
-    margin: 8px 0;
-    display: flex;
-    align-items: center;
-    padding: 12px 21px;
-    background-color: #fff;
+.img-psd {
+  display: inline-block;
+  width: 14px;
+  height: 21px;
+  background: url("../i/locked.png") no-repeat;
+  background-position: 0 0;
+  background-size: 100% 100%;
 }
-.img-iph{
-    display: inline-block;
-    width: 14px;
-    height: 21px;
-    vertical-align: middle;
-    background: url(../i/iphone.png) 0 0/100% 100% no-repeat;
+.vertical-line {
+  display: inline-block;
+  width: 1px;
+  height: 26px;
+  background-color: #e1e5e7;
+  margin: 0 23px 0 17px;
 }
-.vertical-line{
-    display: inline-block;
-    width: 1px;
-    height: 26px;
-    vertical-align: middle;
-    background-color: #e1e5e7;
-    margin: 0 23px 0 17px;
+.btn {
+  width: 100%;
+  height: 50px;
+  margin: 35px 0 10px 0;
 }
-.img-psd{
-    display: inline-block;
-    width: 14px;
-    height: 21px;
-    vertical-align: middle;
-    background: url(../i/locked.png) 0 0/100% 100% no-repeat;
+button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 18px;
+  background-color: #5fc0cd;
+  color: #fff;
+  letter-spacing: 5px;
+  outline: none;
 }
-.btn{
-    width: 100%;
-    height: 50px;
-    margin: 35px 0 10px 0;
-}
-button{
-    width: 100%;
-    height: 100%;
-    border: none;
-    font-size: 18px;
-    background-color: #5fc0cd;
-    color: #fff;
-    letter-spacing: 5px;
-    outline: none;
-}
-.fgt-psd{
-    float: right;
-    padding-right: 15px;
-    color: #5fc0cd;
+.fgt-psd {
+  float: right;
+  padding-right: 15px;
+  color: #5fc0cd;
+  text-decoration: none;
 }
 .fgt-psd:focus,
 .fgt-psd:hover,
-.fgt-psd:active{
-    color: #5fc0cd;
+.fgt-psd:active {
+  color: #5fc0cd;
 }
-input{
-    border: none;
-    outline: none;
-    height: 26px;
-    font-size: 16px;
-    color: #e1e5e7;
-    /*caret-color:red;*/
+input {
+  border: none;
+  outline: none;
+  height: 26px;
+  font-size: 16px;
 }
-input::-webkit-input-placeholder{
-    font-size: 16px;
-    color: #e1e5e7;
-}
-input:-moz-placeholder{
-    font-size: 16px;
-    color: #e1e5e7;
-}
-input::-moz-placeholder{
-    font-size: 16px;
-    color: #e1e5e7;
-}
-input::-ms-input-placeholder{
-    font-size: 16px;
-    color: #e1e5e7;
+input::-webkit-input-placeholder,
+input::-moz-placeholder,
+input:-moz-placeholder,
+input::-ms-input-placeholder {
+  color: #e1e5e7;
 }
