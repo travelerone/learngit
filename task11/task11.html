@@ -8,46 +8,7 @@
     <title>task11</title>
     <!--<link rel="stylesheet/less" href="task11.less">
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>-->
-    <style>
-        html{
-            height: 100%;
-        }
-        body {
-            padding: 0;
-            margin: 0;
-            height: 100%;
-        }
-        a{
-            color: #fff;
-            text-decoration: none;
-        }
-        a:focus,
-        a:hover,
-        a:active{
-            color: #fff;  
-        }
-        @media (min-width: 768px){
-            .full-page{
-                width: 768px;
-                margin: 0 auto;
-            }
-        }
-        .full-page{
-            background-color: #eff0f4;
-            height: 100%;
-        }
-        header{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 44px;
-            padding: 0 15px 0 15px;
-            font-size: 16px;
-            color: #fff;
-            font-family: STHeitiSC-Light;
-            background-color: #5fc0cd;
-        }
-    </style>
+    <link rel="stylesheet" href="task11.css">
 </head>
 
 <body>
@@ -61,15 +22,15 @@
             <form action="">
                 <div class="num-bar">
                     <label for="">
-                        <i></i><i></i>
+                        <i class="img-iph"></i><i class="vertical-line"></i>
                     </label>
-                    <input type="text">
+                    <input type="text" placeholder="请输入手机号">
                 </div>
-                <div class="psd-bar">
+                <div class="num-bar">
                     <label for="">
-                        <i></i><i></i>
+                        <i class="img-psd"></i><i class="vertical-line"></i>
                     </label>
-                    <input type="password">
+                    <input type="password" placeholder="请输入密码">
                 </div>
                 <div class="btn">
                     <button>
