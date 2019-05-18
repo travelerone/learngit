@@ -1,0 +1,222 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.full-page {
+    height: 100%;
+    background-color: #fff;
+
+    @media (min-width: 768px) {
+        width: 768px;
+        margin: 0 auto;
+    }
+}
+@mixin bar ($height, $background-color) {
+    width: 100%;
+    height: $height;
+    background-color: $background-color;
+}
+
+@mixin dfcc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    @include bar(44px, #5fc0cd);
+    @include dfcc;
+    position: relative;
+}
+
+@mixin rounded-corners {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.btn-grp{
+    background-color: #55a8b3;
+    @include rounded-corners();
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.btn-left,.btn-right{
+    display: inline-block;
+    width: 72px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    @extend .btn-grp;
+    &:hover{
+        background-color: #fff;
+        color:  #5fc0cd;
+    }
+}
+@mixin absolute-center {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+@mixin icon($icon, $width, $height) {
+    display: inline-block;
+    background: url($icon) no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
+    width: $width;
+    height: $height;
+}
+$icon-position: "position.png";
+.position{
+    @include icon($icon-position, 21px, 22px);
+    @include absolute-center();
+    right: 15px;
+}
+.dropdown-grp{
+    @include bar(auto, #fff);
+    display: flex;
+}
+.dropbtn{
+    background-color: #fff;
+    color: #999999;
+    padding: 13px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    outline: none;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+    flex: 1;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    min-width: 100px;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+$icon-drop: "dropdown.png";
+.icon-drop{
+    @include icon($icon-drop, 7px, 4px);
+    @include absolute-center();
+    right: 15px;
+}
+.vertical-line{
+    width: 1px;
+    height: 44px;
+    background: linear-gradient(#fff,#e1e5e7,#fff);
+}
+.dropdown-bar{
+    border-bottom: 1px solid #e1e5e7;
+}
+.line{
+    position: relative;
+    border-bottom: 1px solid #e1e5e7;
+    padding: 15px;
+  }
+$icon-calendar: "../i/6-sprite.png";
+  @mixin icon-before($icon, $x, $y) {
+    content: "";
+    display: inline-block;
+    background: url($icon) no-repeat $x $y;
+    width: 12px;
+    height: 12px;
+    background-size: 12px;
+    position: relative;
+    top:2px;
+    margin-right: 8px;
+  }
+  .calendar{
+      font-size: 12px;
+      color: #999;
+      &::before{
+         @include icon-before($icon-calendar, 0, 0);
+      }
+  }
+  .time{
+    padding-left: 20px;
+    font-size: 14px;
+    color: #333333;
+    display: block;
+    width: 50vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .location{
+      font-size: 12px;
+      color: #999;
+      &::before{
+        @include icon-before($icon-calendar, 0, -60px);
+      }
+  }
+  .chevron-right{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+    font-size: 15px;
+    color: #e63b0e;
+  }
+  .chevron-right::after{
+    content: "";
+    display: inline-block;
+    background: url(../i/6-sprite.png) no-repeat 0 -90px;
+    width: 15px;
+    height: 15px;
+    background-size: 15px;
+    position: relative;
+    top: 3px;
+    margin-left: 10px;
+  }
+  $icon-home: "home.png";
+  .icon-home{
+    @include icon($icon-home, 23px, 20px);
+}
+$icon-write: "write.png";
+$icon-my: "my.png";
+.write{
+    @include icon($icon-write, 20px, 21px);
+}
+.my{
+    @include icon($icon-my, 21px, 21px);
+}
+footer{
+    display: flex;
+    align-items: center;
+    @include bar(50px, #f8fafb);
+    font-size: 12px;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    max-width: 768px;
+}
+.write-bg{
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    background-color: #5fc0cd;
+    text-align: center;
+    line-height: 50px;
+}
