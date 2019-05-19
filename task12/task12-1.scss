@@ -130,7 +130,7 @@ $h20: 20px;
 }
 
 .star {
-    @include icon(icon-star, 12px, 12px)
+    @include icon($icon-star, 12px, 12px);
 }
 
 .vertical-line {
