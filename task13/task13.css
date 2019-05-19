@@ -1,0 +1,122 @@
+/* css reset */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+body {
+    margin: 0;
+}
+
+/* global */
+body {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .full-page {
+        width: 768px;
+        margin: 0 auto;
+    }
+}
+
+.dfcb {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bg-29 {
+    background-color: #29bde0;
+}
+
+.bg-b9 {
+    background-color: #b9e9f5;
+}
+
+.bar {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 17px;
+    color: #fff;
+    padding: 12px;
+}
+
+.bar-icon {
+    width: 20px;
+}
+
+.icon-play {
+    width: 26px;
+}
+
+.absc-r15 {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translate(0, -50%);
+}
+
+.icon-t {
+    position: absolute;
+    left: 25px;
+    top: 0;
+}
+.card{
+    width: 68px;
+    height: 68px;
+    border: 3px solid #fff;
+}
+.incard-lh{
+    line-height: 50px;
+}
+.bg-f5{background-color: #f5c97b;}
+.bg-83{background-color: #83b09a;}
+.select-bar{
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+.number{
+    height: 110px;
+}
+.number:hover .select-bar{
+    display: inline-block;
+}
+.icon-bar{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+}
+.knife{
+    background: url(../i/7-sprites.png) no-repeat -5px -55px;
+    background-size: 25px 100px;
+}
+.search{
+    background: url(../i/7-sprites.png) no-repeat -5px -80px;
+    background-size: 25px 100px;
+}
+.confirm{
+    background: url(../i/7-sprites.png) no-repeat -5px -5px;
+    background-size: 25px 100px;
+}
+.cross{
+    background: url(../i/7-sprites.png) no-repeat -5px -30px;
+    background-size: 25px 100px;
+}
+
+main{
+    height: 300px;
+    overflow: auto;
+}
+.bg-fb{
+    background-color: #fbb435;
+}
