@@ -394,6 +394,11 @@ li a {
 .text-left{
     text-align: left;
 }
+.text-right{text-align: right;}
+.border-right-0{
+    border-right: none!important;
+}
+.text-center{text-align: center;}
 .home-section-student {
     text-align: center;
     border: 1px solid #e8e8e8;
@@ -490,8 +495,9 @@ footer img {
     font-size: 12px;
 }
 /*第二页职业样式*/
-tr,td{
-    margin: 0;
+table
+{
+    border-collapse:collapse;
 }
 .content {
     margin: 25px 0;
