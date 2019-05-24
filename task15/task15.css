@@ -216,17 +216,10 @@ img {
 }
 
 .bg-29 {
-    background-color: #29b078;
+    background-color: #26a26f;
 }
-
 .bg-white {
     background-color: #fff;
-}
-
-.navbar-brand {
-    max-width: 300px;
-    float: left;
-    padding: 15px;
 }
 
 ul {
@@ -236,13 +229,6 @@ ul {
     text-align: center;
 }
 a{text-decoration: none;}
-li a {
-    display: block;
-    padding: 8px 16px;
-    color: #fff;
-}
-
-
 
 @media (min-width: 768px) {
     li {
@@ -284,6 +270,49 @@ li a {
     }
 
 }
+.img-index{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.img-index li{
+    float: left;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    line-height: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    margin-right: 2px;
+    border-radius: 50%;
+}
+.one{
+    background-color: #000;
+    color: #fff;
+    -webkit-animation: one 10s infinite;
+}
+.two{
+    -webkit-animation: two 10s infinite;
+}
+.three{
+    -webkit-animation: three 10s infinite;
+}
+@-webkit-keyframes one {
+    30%,40%,50%,60%,70%,80%,90%,100%{ background-color: #fff; color: #000000;}
+    0%,25%{ background-color: #29b078;color: #ffffff;}
+  }
+  @-webkit-keyframes two {
+    0%,10%,25%,70%,80%,90%,100%{ background-color: #fff; color: #000000;}
+    35%,60%{ background-color: #29b078;color: #ffffff;}
+  }
+  @-webkit-keyframes three {
+    0%,10%,20%,30%,40%,50%,60%{ background-color: #fff; color: #000000;}
+    75%,100%{ background-color: #29b078;color: #ffffff;}
+  }
 /*轮播下大图标*/
 .home-tag {
     padding: 60px 0 58px 0;
@@ -582,4 +611,80 @@ table
 h5 a{
     text-decoration: none;
     color: #000;
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #26a26f;
+}
+
+ul.topnav li {
+    float: right;
+    line-height: 70px;
+}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {
+    background-color: #26a26f;
+}
+
+ul.topnav li a.active {
+    background-color: #26a26f;
+    border-bottom: 3px solid #fff;
+}
+
+.menu {
+    display: none;
+    overflow: hidden;
+    background-color: #26a26f;
+    padding: 15px;
+}
+@media screen and (max-width: 768px) {
+
+    ul.topnav li {
+        float: none;
+       line-height: 30px;
+    }
+
+    ul {
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+    ul.topnav li a.active {
+    background-color: #227a56;
+    border-bottom: 3px solid transparent;
+}
+    .col-6{width: 100%;}
+}
+
+.toggle {
+    box-sizing: content-box;
+    display: inline-block;
+    float: right;
+    width: 30px;
+    height: 5px;
+    padding: 10px 0;
+    border-top: 5px solid #fff;
+    border-bottom: 5px solid #fff;
+    background-color: #fff;
+    background-clip: content-box;
+}
+input[type="checkbox"] {
+position: absolute;
+clip: rect(0, 0, 0, 0);
+}
+input[type="checkbox"]:checked~ul {
+    display: block;
 }
