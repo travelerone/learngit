@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>radio2</title>
+    <style>
+        /*为label添加一个伪元素*/
+        input[type="radio"] + label::before{
+            content: "";
+            display: inline-flex;
+            box-sizing: border-box;
+            vertical-align: middle;
+            font-size: 18px;
+            width: 1em;
+            height: 1em;
+            margin-right: .4em;
+            border-radius: 50%;
+            border: 1px solid #01cd78;
+            text-indent: .15em;
+            line-height: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="radio" name="sex" id="male">
+    <label for="male">男</label>
+    <input type="radio" name="sex" id="female">
+    <label for="female">女</label>
+</body>
+
+</html>
