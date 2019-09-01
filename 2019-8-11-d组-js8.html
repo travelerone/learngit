@@ -1,0 +1,283 @@
+﻿<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>葡萄藤PPT</title>
+
+	<link rel="stylesheet" href="https://it-xzy.github.io/WEB-NEW/css/reveal/reveal.css">
+
+	<!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+	<link rel="stylesheet" href="https://it-xzy.github.io/WEB-NEW/css/reveal/theme/ptt.css">
+
+	<!-- syntax highlighting 代码高亮主题 -->
+	<link rel="stylesheet" href="https://it-xzy.github.io/WEB-NEW/lib/reveal/css/zenburn.css">
+
+	<!-- <link rel="stylesheet" href="./task-js-1.css"> -->
+
+	<!-- 打印和PDF输出样式 -->
+	<!-- <script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? './css/reveal/print/pdf.css' :
+			'../css/reveal/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script> -->
+</head>
+
+<body>
+	<img src="https://it-xzy.github.io/WEB-NEW/img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">
+	<map name="pttmap">
+		<area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank" />
+	</map>
+	<div class="reveal">
+		<div class="slides">
+			<section class="txt">
+				<h1></h1>
+				<h2>小课堂【js-08】</h2>
+				<h4>课题：angular js自定义指令 directive 如何使用？为什么要使用封装的自定义指令？</h4>
+				<p>分享人：肖明明</p>
+			</section>
+
+			<section>
+				<p>目录</p>
+				<p>1.背景介绍</p>
+				<p>2.知识剖析</p>
+				<p>3.常见问题</p>
+				<p>4.解决方案</p>
+				<p>5.编码实战</p>
+				<p>6.扩展思考</p>
+				<p>7.参考文献</p>
+				<p>8.更多讨论</p>
+			</section>
+
+			<section>
+				<section>
+					<h3>
+						1.背景介绍
+					</h3>
+					<h3>什么是指令</h3>
+					<p class="txt-word-3">&emsp;&emsp;指令就是DOM与逻辑行为的媒介，本质就是DOM绑定的独立逻辑行为函数。<br>
+						&emsp;&emsp;angular通过内置指令的方式实现了对html的拓展，同时也赋予了我们自定义指令的功能，让我们根据实际需求进行指令的定制。
+						自定义指令涉及到模板（template）、作用域（scope）、数据绑定和Dom操作等内容。</p>
+				</section>
+			</section>
+			<section>
+				<h3>内置指令</h3>
+				<p class="txt-word-3">&emsp;&emsp;内置指令 – 以ng开头，比如ng-app ng-model ng-init ng-controller ng-class
+					ng-show/hide ng-bind ng-if ng-repeat 等等<br>
+					&emsp;&emsp;一般情况下，AngularJS内置指令就能满足我们的需求，但是为了简化开发流程，我们可以将通用的功能封装成指令，形成自定义的指令库。用directive()方法实现自定义指令。
+				</p>
+			</section>
+			<section>
+				<section>
+					<h3>2.知识剖析</h3>
+					<h3>如何自定义指令</h3>
+					<h5>我们可以用directive 函数来添加自定义的指令。</h5>
+				</section>
+			</section>
+			<section>
+				<p class="txt-word-3">
+					调用angular.Module对象的directive(name,directiveFactory)方法即可添加一个自定义指令。该方法的第一个参数指定自定义指令的名称。第二个参数directiveFactory是一个函数，该函数返回一个js对象，负责实现自定义函数的行为，该js对象支持如下属性：
+				</p>
+			</section>
+			<section>
+				<p>
+					<li>template: 指定自定义指令的模板内容，自定义指令将会被替换成该属性所指定的HTML模板</li>
+					<li>templateUrl: 同上功能大致相同</li>
+					<li>restrict: 指定自定义指令适合的使用方式，元素（E），属性（A），样式（C），注释（M），默认值EA</li>
+					<li>replace: 设为true，则对应的HTML将会完全替换指定该指令的元素</li>
+					<li>scope: 蛇者标签的scope行为</li>
+					<li>link: 制定一个函数，该函数通常用于为DOM元素绑定事件处理函数</li>
+					<li>compile: 制定一个函数，该函数通常修改目标DOM元素</li>
+				</p>
+			</section>
+			<section>
+				<p>
+					<li>controller: 用于分配一个函数</li>
+					<li>require: 用于指定，当一个自定义指令需要调用另一个自定义指令的函数时依赖的指令</li>
+					<li>priority: 指定指令的优先级</li>
+					<li>terminal: 设为true，则同一元素的其他指令优先级高于本指令，则其他指令将停止执行</li>
+					<li>transclude: 设为true，则其可用于将原始元素的内容嵌入到自定义指令的模板中</li>
+				</p>
+			</section>
+
+			<section>
+				<h3>指令定义对象详解</h3>
+				<h3>link方法</h3>
+				<li class="txt-word-3">先看个例子，比如我要接收指令的属性，然后把属性值输出到页面中，这种需要访问指令属性的情况，就可以使用指令定义对象的link()方法。（例8.5 ，8.6）
+				</li>
+			</section>
+			<section>
+				<p>Link()方法接收3个参数：</p>
+				<li class="txt-word-3">scope参数 表示指令作用域，默认情况下和父级作用域相同。
+				</li>
+				<li class="txt-word-3">elem 参数 表示应用当前指令的HTML元素。
+				</li>
+				<li class="txt-word-3">attrs 参数 表示一个对象，包含指令的所有属性级属性值。通过attrs.name 获取属性值。
+				</li>
+			</section>
+			<section>
+				<p>link()方法的使用场合如下: </p>
+				<li class="txt-word-3">需要获取或修改自定义指令属性时
+				</li>
+				<li class="txt-word-3">当指令需要监视AngularJS作用域模型数据变化时
+				</li>
+				<li class="txt-word-3">当指令需要响应HTML模板中元素单击、鼠标移动等事件时 （例8.7）
+				</li>
+			</section>
+
+			<section>
+				<p>compile方法 ——对DOM元素的修改</p>
+				<p>conpile 方法接收两个参数：</p>
+				<li class="txt-word-3">tElem: 指令所在的元素
+				</li>
+				<li class="txt-word-3">tAttrs: 指令元素的所有属性列表
+				</li>
+				<p>compile()方法的主要作用是在link()方法执行之前对DOM元素进行修改，一般情况下link()方法即可满足大部分需求，compile()方法使用相对较少（例8.8）</p>
+			</section>
+
+
+			<section>
+				<p>scope属性与指令作用域</p>
+				<p>默认情况下，指令的作用域和控制器实例化时创建的作用域是同一个对象</p>
+				<li class="txt-word-3">scope属性设置为true，表示为指令创建一个新的作用域对象，该作用域对象会从父作用域原型继承
+				</li>
+				<li class="txt-word-3">scope 属性设为{ }，为指令创建了一个孤立的作用域，不会继承父作用域的任何模型数据
+				</li>
+			</section>
+
+
+			<section>
+				<p>如果我们要在孤立作用域中访问父作用域中的模型数据，那么怎么做呢？ </p>
+				<li class="txt-word-3">使用@符号建立基于属性的绑定（例8.9 8.10）
+				</li>
+				<li class="txt-word-3">使用=符号建立双向绑定 8.10
+				</li>
+				<li class="txt-word-3">使用&符号调用父作用域中的方法 8.11
+				</li>
+			</section>
+
+			<section>
+				<p>自定义指令的controller和controllerAs属性</p>
+				<p>自定义指令的controller属性可分配一个函数，该函数可在自定义指令scope中定义额外的数据和函数，这些数据可控自定义指令使用，而函数则可在link属性中使用</p>
+
+			</section>
+
+			<section>
+				<section>
+					<h3>3.常见问题</h3>
+					<h3>为什么要用自定义指令</h3>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>4.解决方案</h3>
+					<p>
+						我们经常进行很多DOM操作，如点击事件，表单验证事件等等，angular不建议我们将这些操作放在控制层，也即Contrller处，而是应该在指令处进行DOM的操作。也算是为了减轻控制层的负担吧。
+					</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>5.代码实战</h3>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>6.拓展思考</h3>
+					<p class="txt-word-3">
+						&emsp;&emsp;指令就相当于为我们写了公共的自定义DOM元素或CLASS属性或ATTR属性，并且它不只是单单如此，
+						你还可以在它的基础上来操作scope、绑定事件、更改样式等。通过这个Directive，我们可以封装很多公共指令，
+						比如分页指令、自动补全指令等等。然后在HTML页面里只需要简单的写一行代码就可以实现很多强大的功能。
+					</p>
+				</section>
+			</section>
+			<section>
+				<h3>7.参考文献</h3>
+				<h4>AngularJS入门与进阶 江荣波著
+				</h4>
+			</section>
+			<section>
+				<section>
+					<h3>8.更多讨论</h3>
+					<h3>1.什么时候用指令？</h3>
+					<li class="txt-word-3">使你的Html更具语义化，不需要深入研究代码和逻辑即可知道页面的大致逻辑。
+					</li>
+					<li class="txt-word-3">抽象一个自定义组件，在其他地方进行重用。
+					</li>
+				</section>
+			</section>
+			<section>
+				<h3>2.为什么不推荐Angular和JQuery混合使用？</h3>
+				<p class="txt-word-3">在Angular中，操纵数据不是通过抓取和注入。一般通过数据绑定来实现，JQurey是抓取dom节后进行操作的。核心理念不同。
+					虽然在Angular里也能通过抓取然后注入数据，但是会出现很多不必要的问题和bug.
+				</p>
+			</section>
+			<section>
+				<h3>3.为什么在directive里尽量不要用大写。
+				</h3>
+				<p class="txt-word-3">因为在directive里，会将遇到的大写字母转换成 “-” + 转换的小写字母。
+				</p>
+			</section>
+			<section>
+				<p>感谢大家观看</p>
+				<p>
+					<small>BY : 肖明明</small>
+				</p>
+			</section>
+		</div>
+	</div>
+
+	<script src="https://it-xzy.github.io/WEB-NEW/lib/reveal/js/head.min.js"></script>
+	<script src="https://it-xzy.github.io/WEB-NEW/lib/reveal/reveal.js"></script>
+
+	<script>
+		// 以下为常见配置属性的默认值
+		// {
+		// 	controls: true, // 是否在右下角展示控制条
+		// 	progress: true, // 是否显示演示的进度条
+		// 	slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+		// 	history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+		// 	keyboard: true, // 是否启用键盘快捷键来导航
+		// 	overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+		// 	center: true, // 是否将幻灯片垂直居中
+		// 	touch: true, // 是否在触屏设备上启用触摸滑动切换
+		// 	loop: false, // 是否循环演示
+		// 	rtl: false, // 是否将演示的方向变成RTL，即从右往左
+		// 	fragments: true, // 全局开启和关闭碎片。
+		// 	autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+		// 	transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+		// 	transitionSpeed: 'default', // 过渡速度，default/fast/slow
+		// 	mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+		// }
+
+		// 初始化幻灯片
+		Reveal.initialize({
+			history: true,
+			dependencies: [{
+				src: 'https://it-xzy.github.io/WEB-NEW/plugin/markdown/marked.js'
+			},
+			{
+				src: 'https://it-xzy.github.io/WEB-NEW/plugin/markdown/markdown.js'
+			},
+			{
+				src: 'https://it-xzy.github.io/WEB-NEW/plugin/notes/notes.js',
+				async: true
+			},
+			{
+				src: 'https://it-xzy.github.io/WEB-NEW/plugin/highlight/highlight.js',
+				async: true,
+				callback: function () {
+					hljs.initHighlightingOnLoad();
+				}
+			}
+			]
+		});
+	</script>
+</body>
+
+</html>
